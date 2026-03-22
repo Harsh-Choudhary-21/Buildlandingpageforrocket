@@ -5,7 +5,7 @@ import { Terminal } from './Terminal';
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden bg-gradient-to-br from-white via-pink-50 to-white">
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 pt-32 relative overflow-hidden bg-gradient-to-b from-white via-pink-50 to-pink-100">
       {/* Gradient Background Orbs */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-pink-300/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl"></div>

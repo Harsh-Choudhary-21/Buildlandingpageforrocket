@@ -7,10 +7,14 @@ import { Features } from './components/Features';
 import { Installation } from './components/Installation';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar';
+import { FallingPetals } from './components/FallingPetals';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <Navbar />
+      <FallingPetals />
       <Hero />
       <Problem />
       <Solution />

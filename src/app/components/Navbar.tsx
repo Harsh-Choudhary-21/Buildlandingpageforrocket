@@ -10,13 +10,13 @@ export function Navbar() {
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
-    ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0.95)']
+    ['rgba(255, 250, 250, 0.6)', 'rgba(255, 250, 250, 0.85)']
   );
   
   const borderColor = useTransform(
     scrollY,
     [0, 100],
-    ['rgba(251, 207, 232, 0)', 'rgba(251, 207, 232, 0.5)']
+    ['rgba(251, 207, 232, 0.2)', 'rgba(251, 207, 232, 0.4)']
   );
 
   useEffect(() => {
