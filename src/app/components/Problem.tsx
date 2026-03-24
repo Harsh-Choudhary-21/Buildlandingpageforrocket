@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 
 export function Problem() {
   const { scrollYProgress } = useScroll();
-  
+
   // Blur effects for top and bottom
   const topBlur = useTransform(scrollYProgress, [0, 0.1], [10, 0]);
   const bottomBlur = useTransform(scrollYProgress, [0.9, 1], [0, 10]);
@@ -28,19 +28,19 @@ export function Problem() {
   ];
 
   return (
-    <section className="py-20 px-4 relative bg-gradient-to-b from-pink-100 via-pink-50 to-pink-50/50">
+    <section className="py-20 px-4 relative bg-gradient-to-b from-pink-100 via-pink-50 to-white">
       {/* Top Blur Effect */}
       <motion.div
         style={{ filter: `blur(${topBlur}px)` }}
         className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-pink-100/50 to-transparent pointer-events-none z-10"
       />
-      
+
       {/* Bottom Blur Effect */}
       <motion.div
         style={{ filter: `blur(${bottomBlur}px)` }}
         className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent to-transparent pointer-events-none z-10"
       />
-      
+
       <div className="max-w-6xl mx-auto relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export function Problem() {
             Secret leaks are the #1 cause of security breaches in modern development
           </p>
         </motion.div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
             <motion.div

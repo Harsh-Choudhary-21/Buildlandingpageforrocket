@@ -135,7 +135,7 @@ export function Demo() {
   };
 
   return (
-    <section className="py-20 px-4 relative bg-gradient-to-b from-pink-100 via-pink-50 to-white">
+    <section className="py-20 px-4 relative bg-gradient-to-b from-white via-pink-50 to-pink-100">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

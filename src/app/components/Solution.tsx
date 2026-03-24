@@ -11,12 +11,12 @@ export function Solution() {
   ];
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-pink-50/50 via-white to-white">
+    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-white via-pink-50 to-pink-100">
       {/* Background accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl">
         <div className="w-full h-full bg-gradient-to-r from-pink-300/20 to-pink-400/20 rounded-full blur-3xl"></div>
       </div>
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export function Solution() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
             Rocket is a secure Git wrapper that automatically scans your code and prevents sensitive data from being committed.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -68,7 +68,7 @@ export function Solution() {
             </motion.div>
           </div>
         </motion.div>
-        
+
         {/* Flow Diagram */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
           {steps.map((step, index) => (

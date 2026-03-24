@@ -5,11 +5,11 @@ import { motion } from 'motion/react';
 
 export function CTA() {
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-white via-pink-50 to-pink-100">
+    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-pink-100 via-pink-50 to-white">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-pink-300/20 to-pink-400/20"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-400/30 rounded-full blur-3xl"></div>
-      
+
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -24,7 +24,7 @@ export function CTA() {
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
             Join thousands of developers who never worry about leaked secrets. Start protecting your code today.
           </p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export function CTA() {
               Star on GitHub
             </Button>
           </motion.div>
-          
+
           <div className="flex items-center justify-center gap-2 text-gray-600">
             <span>Free forever</span>
             <span>•</span>
@@ -48,7 +48,7 @@ export function CTA() {
             <span>No sign up required</span>
           </div>
         </motion.div>
-        
+
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

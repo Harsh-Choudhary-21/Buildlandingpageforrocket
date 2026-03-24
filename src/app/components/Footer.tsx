@@ -17,7 +17,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="py-12 px-4 border-t-2 border-pink-200 relative bg-gradient-to-b from-pink-100 to-white">
+    <footer className="py-12 px-4 border-t-2 border-pink-200 relative bg-gradient-to-b from-white to-pink-50">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
           {/* Logo and tagline */}
@@ -34,7 +34,7 @@ export function Footer() {
             </div>
             <p className="text-gray-600">Secure Git commits by default. Never leak secrets again.</p>
           </motion.div>
-          
+
           {/* Links */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -54,12 +54,12 @@ export function Footer() {
             ))}
           </motion.div>
         </div>
-        
+
         <div className="pt-8 border-t-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             © 2026 Rocket Team. All rights reserved.
           </p>
-          
+
           {/* Social links */}
           <div className="flex gap-4">
             {socialLinks.map((social, index) => (

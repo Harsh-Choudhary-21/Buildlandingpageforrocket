@@ -37,10 +37,10 @@ export function Features() {
   ];
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-white via-pink-50 to-pink-100">
+    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-pink-100 via-pink-50 to-white">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-pink-300/10 to-pink-400/10"></div>
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export function Features() {
             Everything you need to keep your secrets safe
           </p>
         </motion.div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
