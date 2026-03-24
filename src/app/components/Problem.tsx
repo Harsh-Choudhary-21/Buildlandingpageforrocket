@@ -28,7 +28,7 @@ export function Problem() {
   ];
 
   return (
-    <section className="py-20 px-4 relative bg-gradient-to-b from-pink-100 to-pink-50">
+    <section className="py-20 px-4 relative bg-gradient-to-b from-pink-100 via-pink-50 to-pink-50/50">
       {/* Top Blur Effect */}
       <motion.div
         style={{ filter: `blur(${topBlur}px)` }}
@@ -38,7 +38,7 @@ export function Problem() {
       {/* Bottom Blur Effect */}
       <motion.div
         style={{ filter: `blur(${bottomBlur}px)` }}
-        className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-pink-50/50 to-transparent pointer-events-none z-10"
+        className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent to-transparent pointer-events-none z-10"
       />
       
       <div className="max-w-6xl mx-auto relative z-20">

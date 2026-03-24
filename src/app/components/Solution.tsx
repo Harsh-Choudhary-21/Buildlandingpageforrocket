@@ -11,7 +11,7 @@ export function Solution() {
   ];
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-pink-50 to-white">
+    <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-pink-50/50 via-white to-white">
       {/* Background accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl">
         <div className="w-full h-full bg-gradient-to-r from-pink-300/20 to-pink-400/20 rounded-full blur-3xl"></div>
