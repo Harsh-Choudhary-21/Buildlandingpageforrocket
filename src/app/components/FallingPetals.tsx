@@ -9,6 +9,7 @@ export function FallingPetals() {
 
     const petalCount = 15; // Reduced for subtlety
     const petals: HTMLDivElement[] = [];
+    const animations: gsap.core.Tween[] = [];
 
     // Create petals
     for (let i = 0; i < petalCount; i++) {
@@ -30,7 +31,7 @@ export function FallingPetals() {
       const delay = Math.random() * 5;
       const xMovement = Math.random() * 100 - 50;
 
-      gsap.to(petal, {
+      const mainAnim = gsap.to(petal, {
         y: window.innerHeight + 100,
         x: xMovement,
         rotation: Math.random() * 360,
@@ -50,16 +51,35 @@ export function FallingPetals() {
       });
 
       // Add subtle horizontal sway
-      gsap.to(petal, {
+      const swayAnim = gsap.to(petal, {
         x: `+=${Math.random() * 30 - 15}`,
         duration: Math.random() * 3 + 2,
         repeat: -1,
         yoyo: true,
         ease: 'sine.inOut',
       });
+
+      animations.push(mainAnim, swayAnim);
     });
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animations.forEach((anim) => anim.play());
+          } else {
+            animations.forEach((anim) => anim.pause());
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(containerRef.current);
+
     return () => {
+      observer.disconnect();
+      animations.forEach((anim) => anim.kill());
       petals.forEach((petal) => petal.remove());
     };
   }, []);

@@ -3,9 +3,66 @@ import { Terminal } from './Terminal';
 import { Play } from 'lucide-react';
 import { motion } from 'motion/react';
 
+const demoSteps = [
+  {
+    command: 'rocket commit secure -m "demo"',
+    output: []
+  },
+  {
+    command: 'rocket commit secure -m "demo"',
+    output: [
+      { type: 'info' as const, text: 'Scanning files...' }
+    ]
+  },
+  {
+    command: 'rocket commit secure -m "demo"',
+    output: [
+      { type: 'info' as const, text: 'Scanning files...' },
+      { type: 'info' as const, text: 'Found 3 files to commit' }
+    ]
+  },
+  {
+    command: 'rocket commit secure -m "demo"',
+    output: [
+      { type: 'info' as const, text: 'Scanning files...' },
+      { type: 'info' as const, text: 'Found 3 files to commit' },
+      { type: 'warning' as const, text: '.env blocked (AWS_SECRET_KEY detected)' }
+    ]
+  },
+  {
+    command: 'rocket commit secure -m "demo"',
+    output: [
+      { type: 'info' as const, text: 'Scanning files...' },
+      { type: 'info' as const, text: 'Found 3 files to commit' },
+      { type: 'warning' as const, text: '.env blocked (AWS_SECRET_KEY detected)' },
+      { type: 'success' as const, text: 'main.py committed' }
+    ]
+  },
+  {
+    command: 'rocket commit secure -m "demo"',
+    output: [
+      { type: 'info' as const, text: 'Scanning files...' },
+      { type: 'info' as const, text: 'Found 3 files to commit' },
+      { type: 'warning' as const, text: '.env blocked (AWS_SECRET_KEY detected)' },
+      { type: 'success' as const, text: 'main.py committed' },
+      { type: 'success' as const, text: 'utils.js committed' }
+    ]
+  },
+  {
+    command: 'rocket commit secure -m "demo"',
+    output: [
+      { type: 'info' as const, text: 'Scanning files...' },
+      { type: 'info' as const, text: 'Found 3 files to commit' },
+      { type: 'warning' as const, text: '.env blocked (AWS_SECRET_KEY detected)' },
+      { type: 'success' as const, text: 'main.py committed' },
+      { type: 'success' as const, text: 'utils.js committed' },
+      { type: 'success' as const, text: '✨ Secure commit completed! Your secrets are safe.' }
+    ]
+  }
+];
+
 export function Demo() {
   const [step, setStep] = useState(0);
-  
   const demoSteps = [
     {
       command: 'rocket commit secure -m "demo"',
@@ -94,7 +151,7 @@ export function Demo() {
             Watch Rocket protect your repository in real-time
           </p>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -107,7 +164,7 @@ export function Demo() {
             output={demoSteps[step].output}
             className="shadow-2xl shadow-pink-500/20"
           />
-          
+
           {step === demoSteps.length - 1 && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
