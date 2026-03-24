@@ -11,28 +11,28 @@ export function Problem() {
 
   const problems = [
     {
-      icon: <AlertTriangle className="w-8 h-8 text-pink-500" />,
+      icon: <AlertTriangle className="w-8 h-8 text-purple-400" />,
       title: 'Accidental Leaks',
       description: 'Developers accidentally commit API keys, tokens, and credentials to repositories every day.'
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-pink-500" />,
+      icon: <DollarSign className="w-8 h-8 text-purple-400" />,
       title: 'Financial Loss',
       description: 'Leaked secrets lead to unauthorized access, data breaches, and costly security incidents.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-pink-500" />,
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
       title: 'Happens to Everyone',
       description: 'Even experienced developers make mistakes. One slip can compromise your entire system.'
     }
   ];
 
   return (
-    <section className="py-20 px-4 relative bg-gradient-to-b from-pink-100 via-pink-50 to-white">
+    <section className="py-20 px-4 relative bg-gradient-to-b from-black via-gray-950 to-black">
       {/* Top Blur Effect */}
       <motion.div
         style={{ filter: `blur(${topBlur}px)` }}
-        className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-pink-100/50 to-transparent pointer-events-none z-10"
+        className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/50 to-transparent pointer-events-none z-10"
       />
 
       {/* Bottom Blur Effect */}
@@ -49,10 +49,10 @@ export function Problem() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             The Problem is Real
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-400">
             Secret leaks are the #1 cause of security breaches in modern development
           </p>
         </motion.div>
@@ -66,11 +66,11 @@ export function Problem() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ scale: 1.05 }}
-              className="p-8 rounded-2xl bg-white border-2 border-pink-200 hover:border-pink-300 transition-all duration-300 shadow-lg hover:shadow-[0_10px_40px_rgba(236,72,153,0.3)]"
+              className="p-8 rounded-2xl bg-gray-950 border-2 border-white/10 hover:border-purple-500/50 transition-all duration-300 shadow-lg hover:shadow-[0_10px_40px_rgba(168,85,247,0.3)]"
             >
               <div className="mb-4">{problem.icon}</div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900">{problem.title}</h3>
-              <p className="text-gray-600">{problem.description}</p>
+              <h3 className="text-2xl font-bold mb-3 text-white">{problem.title}</h3>
+              <p className="text-gray-400">{problem.description}</p>
             </motion.div>
           ))}
         </div>

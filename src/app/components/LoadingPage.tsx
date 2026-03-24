@@ -88,7 +88,7 @@ export function LoadingPage({ onLoadingComplete }: LoadingPageProps) {
   }, []);
 
   return (
-    <div className="loading-page fixed inset-0 bg-gradient-to-br from-pink-50 via-white to-pink-100 z-50 overflow-hidden">
+    <div className="loading-page fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black z-50 overflow-hidden">
       {/* Falling petals container */}
       <div ref={petalsContainerRef} className="absolute inset-0 pointer-events-none" />
 
@@ -145,22 +145,22 @@ export function LoadingPage({ onLoadingComplete }: LoadingPageProps) {
 
       {/* Center Logo - No parallax */}
       <div ref={logoRef} className="absolute inset-0 flex items-center justify-center z-10">
-        <div className="text-center bg-white/80 backdrop-blur-md rounded-3xl px-12 py-8 shadow-2xl border border-pink-200">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-pink-500 to-pink-600 bg-clip-text text-transparent mb-2">
+        <div className="text-center bg-gray-950/80 backdrop-blur-md rounded-3xl px-12 py-8 shadow-2xl border border-white/10">
+          <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent mb-2">
             Rocket
           </h1>
-          <p className="text-pink-400 text-xl font-medium">Secure Git Commits</p>
+          <p className="text-purple-500 text-xl font-medium">Secure Git Commits</p>
           <div className="mt-4 flex items-center justify-center gap-2">
-            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
-            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse delay-100"></div>
-            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse delay-200"></div>
+            <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse delay-100"></div>
+            <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse delay-200"></div>
           </div>
         </div>
       </div>
 
       {/* Gradient overlays for better blending */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-pink-100/30 via-transparent to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none"></div>
 
       {/* CSS for falling petals */}
       <style>{`
